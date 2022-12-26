@@ -11,29 +11,47 @@
     <title>You Quizz</title>
 </head>
 <body >
+    
 <div class="container1">
+    
 <div class="quizbox">
+    <button type="submit" id="refreash" style="text-decoration: none;   color: white; background-color: blue;  border: 5px solid blue;
+          border-radius: 50%; margin-left: 430px; cursor: pointer; display: none;">&#9747</button>
 <div id="quiz">
     <h1>PHP Quizz</h1>
     <div class="quizheader">
-        <p id="countdown" class="left">10:00</p>
     </div>
     <div class="startgame" id="startquizz">
-        <p>This Quizz Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas quos facilis odio! Veniam voluptatem tempora odio sed </p>
+        <p class="bluebg">You can test your PHP skills with PHP Quiz.</p>
+        <p class="bluebg">The test contains 10 questions and there is no time limit.</p>
+        <p class="bluebg">The test is not official, it's just a nice way to see how much you know, or don't know, about PHP.</p>
        <center> <button id="startbtn" class="btn1" style="text-align: center;" onclick="">START</button> </center>
     </div>
+
+
+    <!-- leadearboard -->
+<div class="scoore" id="scores" style="display: none;">
+<p class="sc-no" id="scno">Your Score is 1/10</p>    
+<p class="sc-text" id="sct">you can do better next time 😔</p>
+</div>
     <!-- Q1  -->
     <div class="disp" id="q1">
+        
+        <div class="w3-light-grey">
+            <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%"></div>
+          </div>
+          
+
     <p id="question">What is OOP ?</p>
 
    <div class="options">
-    <input type="radio" name="answers" value="1" id="question1"><label id="a"  class="styleq"  for="question1">Object Orinetetin professionel</label><br>
-    <br>
-    <input type="radio" name="answers" value="2" id="question2"><label id="b" class="styleq"  for="question2">Object Orinetetin professionel</label><br>
-    <br>
-    <input type="radio" name="answers" value="3" id="question3" ><label id="c" class="styleq" for="question3">Object Orinetetin professionel</label><br>
-    <br>
-    <input type="radio" name="answers" value="4" id="question4"><label id="d" class="styleq"  for="question4">Object Orinetetin professionel</label><br>
+    <input type="radio" name="answers" value="1" class="answersss" id="question1"><label id="a"  class="styleq"  for="question1">Object Orinetetin professionel</label><br>
+    <br> 
+    <input type="radio" name="answers" value="2" class="answersss" id="question2"><label id="b" class="styleq"  for="question2">Object Orinetetin professionel</label><br>
+    <br> 
+    <input type="radio" name="answers" value="3" class="answersss" id="question3" ><label id="c" class="styleq" for="question3">Object Orinetetin professionel</label><br>
+    <br> 
+    <input type="radio" name="answers" value="4" class="answersss" id="question4"><label id="d" class="styleq"  for="question4">Object Orinetetin professionel</label><br>
 
    </div>
    <hr>
@@ -42,8 +60,8 @@
     
  <hr>
  <footer>
-    <p>Abdellah El GHOULAM</p>
- </footer>
+    <p class="bluebg">Abdellah El GHOULAM</p>
+         </footer>
 </div>
 
 </div>
