@@ -17,6 +17,8 @@ let S2 = document.getElementById('sct');
 let current = 0;
 var score = 0;
 var selectedanser=0 ;
+let progressBar = document.querySelector('.progress-bar');
+let progressBarFill = progressBar.querySelector('.progress-bar-fill');
 
 refreasher.addEventListener('click', () => {
     location.reload();
@@ -30,6 +32,8 @@ function shuffle(){
     }
 }
 strtbtnn.addEventListener('click',() => {
+    setProgress(10);
+
     startboard.style.display = "none";
     Qestionboard.style.display = "block";
     refreasher.style.display = "block";
@@ -59,14 +63,19 @@ if(current<questions.length){
     
     if(selectedanser ==answer){
         score++;
-        console.log(score);
-        // console.log('correct:'+questionss["answer"]);
+        
     }else{
-        console.log(score);
-        // console.log('correct:'+questionss["answer"]);
+        
     }
     document.querySelector('input[name=answers]:checked').checked = false;
     
+    // progress bar
+
+
+let task = current +1;
+
+setProgress(task*10);
+    // 
     if(current<questions.length-1){
         let questionss = questions[current+1];
         theq.innerText = questionss["question"];
@@ -79,16 +88,16 @@ if(current<questions.length){
     }
 else{
     Qestionboard.style.display = "none";
-    if(score<3){
+    if(score<=3){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "you can do better next time 😔 "
-    }else if(score>3){
+    }else if(score>3 && score<=5){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Okey 👌"
-    }else if(score>5){
+    }else if(score>5 && score < 9){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Good 👍 "   
-    }else if(score == 10){
+    }else if(score >= 10){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Perfect 💯  "    
     }
@@ -100,6 +109,10 @@ else{
    
 
 })
+
+let setProgress = (percentage) => {
+    progressBarFill.style.width = percentage + '%';
+  };
 
 
 
