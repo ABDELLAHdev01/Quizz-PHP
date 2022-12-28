@@ -19,10 +19,16 @@ var score = 0;
 var selectedanser=0 ;
 let progressBar = document.querySelector('.progress-bar');
 let progressBarFill = progressBar.querySelector('.progress-bar-fill');
+let timer = document.getElementById('timer')
+let time=10;
 
 refreasher.addEventListener('click', () => {
     location.reload();
 })
+
+
+
+
 
 function shuffle(){
     let randIndex = Math.floor(Math.random()*questions.length);
@@ -91,13 +97,13 @@ else{
     if(score<=3){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "you can do better next time 😔 "
-    }else if(score>3 && score<=5){
+    }else if(score==3 && score<=5){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Okey 👌"
-    }else if(score>5 && score < 9){
+    }else if(score < 5 && score < 9){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Good 👍 "   
-    }else if(score >= 10){
+    }else if(score == 10){
         S1.innerText = "Your Score is "+ score +"/10"
         S2.innerText =  "Your Score it Perfect 💯  "    
     }
